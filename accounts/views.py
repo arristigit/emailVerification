@@ -113,7 +113,7 @@ def logout_attempt(request):
 
 def send_mail_after_registeration(email, token, username):
     subject = 'Your accounts need to be verified'
-    message = f'Dear {username}, Click on the link to verify your account http://127.0.0.1:8000/verify/{token}'
+    message = f'Dear {username}, Click on the link to verify your account https://email-verification-108.herokuapp.com/verify/{token}'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)
