@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Reset password page{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card shadow-lg border-0 mt-5">
+                <div class="card-body">
+
+                    <div class="container m-3">
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-danger">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                    <h3 class="text-logo">Reset your password</h3>
+                    <br>
+                    <h5>We will make forgot password system soon...</h5><br>
+                    
+                    <div class="text-center">
+                        <a href='/' class='btn btn-success'>Back to home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock body %}

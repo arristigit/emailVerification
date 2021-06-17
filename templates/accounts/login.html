@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Login page{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="card login-content shadow-lg border-0">
+				<div class="card-body">
+					<div class="container m-3">
+						{% if messages %}
+						{% for message in messages %}
+						<div class="alert alert-danger">
+							{{ message }}
+						</div>
+						{% endfor %}
+						{% endif %}
+					</div>
+					<div class="text-center">
+						<img class="logo"
+							src="https://cdn3.iconfinder.com/data/icons/galaxy-open-line-gradient-i/200/account-256.png">
+					</div>
+					<h3 class="text-logo">Login</h3>
+					<br>
+					<form method='post' class="text-center">
+						{% csrf_token %}
+						<input class="form-control border-0" type="text" name="username" placeholder="Type Your Username">
+						<br>
+						<input class="form-control border-0" type="password" name="password" placeholder="Type Your Password">
+						<br>
+						<button class="btn btn-primary btn-sm border-0" type="submit" name="submit">Log In</button>
+						<p class="forgot"><a href="forgotpass">Forgot Password?</a></p>
+					</form>
+				</div>
+				<div class="nomember">
+					<p class="text-center">Not a member? <a href="register">Create an Account</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}

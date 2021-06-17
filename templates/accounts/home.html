@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Home page{% endblock title %}
+
+{% block body %}
+<div class="container m-3">
+	{% if messages %}
+	{% for message in messages %}
+	<div class="alert alert-danger">
+		{{ message }}
+	</div>
+	{% endfor %}
+	{% endif %}
+</div>
+
+<h3 class="text-logo bg-light">Welcome to Email Verification System</h3>
+<br>
+<div class="text-center">
+	<a href="register"><button class="btn btn-primary">Register</button></a>
+	<a href="login"><button class="btn btn-primary">Login</button></a>
+</div>
+
+{% endblock body %}
